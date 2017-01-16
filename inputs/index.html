@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="block1">
+		<p><input type="radio" name="r1" value="0"> 0</p>
+		<p><input type="radio" name="r1" value="1"> 1</p>
+		<p><input type="radio" name="r1" value="22"> 2</p>
+		<p><button id="button1">Тестовая кнопка</button></p>
+		<hr>
+	</div>
+	<div class="block2">
+		<select id="languages">
+			<option value="">CSS</option>
+			<option value="">HTML</option>
+			<option value="">JS</option>
+		</select>
+		<p id="languages-text"></p>
+		<hr>
+	</div>
+	<div class="block3">
+		<input id="range1" type="range" min="0" max="129" step="1">
+		<input type="text" id="range1Input">
+		<div id="block"></div>
+		<hr>
+	</div>
+	<div class="block4">
+		<p>
+			Верхний левый угол:
+			<input type="range" id="rtl" min="0" max="100" step="1">
+			<input type="text" id="ttl">
+		</p>	
+		<p>
+			Верхний правый угол:
+			<input type="range" id="rtr" min="0" max="100" step="1">
+			<input type="text" id="ttr">
+		</p>	
+		<p>
+			Нижний правый угол:
+			<input type="range" id="rbr" min="0" max="100" step="1">
+			<input type="text" id="tbr">
+		</p>	
+		<p>
+			Нижний левый угол:
+			<input type="range" id="rbl" min="0" max="100" step="1">
+			<input type="text" id="tbl">
+		</p>	
+		<div id="border"></div>
+	</div>
+</body>
+</html>

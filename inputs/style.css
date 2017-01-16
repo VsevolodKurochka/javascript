@@ -1,0 +1,10 @@
+#block{
+	width: 20px;
+	height: 20px;
+	background-color: red;
+}
+#border{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
