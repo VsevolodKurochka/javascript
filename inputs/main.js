@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		range1.addEventListener("input", rangeChange);
 		range1Input.addEventListener("input", range1InputChange);
 	// Block 4
+
+		// Range input
+		var rangeInput = document.getElementsByClassName("rangeInput");
+		var textInput = document.getElementsByClassName("textInput");
+
 		// Top left border radius
 		var rtl = document.getElementById("rtl");
 		var ttl = document.getElementById("ttl");
@@ -60,16 +65,37 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		var border = document.getElementById("border");
 
-		function borderChangeRadius(){
+		function borderStyle(){
+			border.style.borderRadius=rtl.value+'px '+rtr.value+'px '+rbr.value+'px '+rbl.value+'px';
+		}
+		// Передаем значения из input[type="range"] в input[type="text"]
+		function changeBorderRange(){
 			ttl.value = rtl.value;
 			ttr.value = rtr.value;
 			tbr.value = rbr.value;
 			tbl.value = rbl.value;
-			border.style.borderRadius=rtl.value+'px '+rtr.value+'px '+rbr.value+'px ' +rbl.value+'px';
+			borderStyle();
 		}
-		borderChangeRadius();
-		rtl.addEventListener("input", borderChangeRadius);
-		rtr.addEventListener("input", borderChangeRadius);
-		rbr.addEventListener("input", borderChangeRadius);
-		rbl.addEventListener("input", borderChangeRadius);
+		// Передаем значения из input[type="text"] в input[type="range"]
+		function changeBorderInput(){
+			rtl.value = ttl.value;
+			rtr.value = ttr.value;
+			rbr.value = tbr.value;
+			rbl.value = tbl.value;
+			borderStyle();
+		}
+		// Объединяем 2 функции
+		function changeBorderAll(){
+			changeBorderRange();
+			changeBorderInput();
+		}
+		// При изменении значения el, запускать функцию.
+		function loopBorder(el, func){
+			for(var i = 0; i < el.length; i++ ){
+				el[i].addEventListener("input", func);
+			}
+		}
+		changeBorderAll();
+		loopBorder(rangeInput, changeBorderRange);
+		loopBorder(textInput, changeBorderInput);
 });
