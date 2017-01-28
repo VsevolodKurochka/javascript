@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.vcontainer{
+	width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.slider{
+	position: relative;
+}
+.slider-content{
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+}
+.slider-item{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+.slider img{
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #000;
+}
+.slider-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 20px 15px;
+	border-radius: 100%;
+	border: none;
+	background-color: #ffa9a9;
+	cursor: pointer;
+}
+.slider-button-prev{
+	left: 15px;
+}
+.slider-button-next{
+	right: 15px;
+}

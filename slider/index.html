@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="vcontainer">
+		<div class="slider" id="slider1">
+			<div class="slider-content">
+				<div class="slider-item"><img src="img/slider1.jpg" alt=""></div>
+				<div class="slider-item"><img src="img/slider2.jpg" alt=""></div>
+				<div class="slider-item"><img src="img/slider3.jpg" alt=""></div>
+				<button class="slider-button slider-button-prev" data-action="prev">prev</button>
+				<button class="slider-button slider-button-next" data-action="next">next</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		var slider1 = new Slider({
+			sliderId: 'slider1',
+			slidesToShow: 3
+		});
+	</script>
+</body>
+</html>
