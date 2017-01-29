@@ -10,18 +10,19 @@
 	<div class="vcontainer">
 		<div class="slider" id="slider1">
 			<div class="slider-content">
-				<div class="slider-item"><img src="img/slider1.jpg" alt=""></div>
-				<div class="slider-item"><img src="img/slider2.jpg" alt=""></div>
-				<div class="slider-item"><img src="img/slider3.jpg" alt=""></div>
-				<button class="slider-button slider-button-prev" data-action="prev">prev</button>
-				<button class="slider-button slider-button-next" data-action="next">next</button>
+				<div class="slider-item"><img src="img/slider1.jpg" alt=""><p>1</p></div>
+				<div class="slider-item"><img src="img/slider2.jpg" alt=""><p>2</p></div>
+				<div class="slider-item"><img src="img/slider3.jpg" alt=""><p>3</p></div>
+				<div class="slider-item"><img src="img/slider1.jpg" alt=""><p>4</p></div>
 			</div>
+			<button class="slider-button slider-button-prev" data-action="left">prev</button>
+			<button class="slider-button slider-button-next" data-action="right">next</button>
 		</div>
 	</div>
 	<script>
 		var slider1 = new Slider({
 			sliderId: 'slider1',
-			slidesToShow: 3
+			slidesToShow: 1
 		});
 	</script>
 </body>
